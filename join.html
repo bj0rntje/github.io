@@ -1,11 +1,16 @@
 <html>
 <head>
 <script>
+function sleep(ms) {
+  return new Promise(resolve => setTimeout(resolve, ms));
+}
 function FindUser() {
     let str = window.location.href;
     let result = str.slice(37);
-    window.location.replace('https://www.roblox.com/users/'+result)
-    window.location.replace('roblox://experiences/start?userId='+result)
+    
+    window.location.replace('roblox://experiences/start?userId='+result);
+    sleep(10000).then(() => { window.location.replace('https://www.roblox.com/users/'+result); });
+    
 }
 
 
