@@ -1,4 +1,20 @@
-<html><head></head><body>
+<html><head>
+<script>
+  function getValue() {
+  var textbox = document.getElementById("textbox");
+  let FixedStringValues = textbox.value.slice(34)
+  let sharelink = 'https://bj0rntje.github.io/invite.html?' + FixedStringValues
+  navigator.clipboard.writeText(sharelink);
+  alert('Coppied '+sharelink+'to clipboard');
+}
+
+//function setValue() {
+//  var textbox = document.getElementById("textbox");
+//  textbox.value = "New Value";
+//}
+//<button onclick="setValue()">setting</button>
+</script>
+</head><body>
 <h2>Automatic Joiners</h2>
 <a href="https://bj0rntje.github.io/join.html?640031638" target="_blank">Join User</a> 
 <br>
@@ -34,4 +50,13 @@ tampermonkey is a site to publish scripts. this will require the tampermonkey ex
 This adds a button next to the join button to instantly join the game and if join button doesen't exists it will still be added so you don't have to refresh the page
 <br>
 https://greasyfork.org/nl/scripts/509224-roblox-quick-join-button-profile
+<br><br><br>
+Share Server Link Generator,
+<br>
+Go in a server, Press Escape or go to menu, Press invite, Press in upper right corner copy link
+<br>
+then paste link in the box and press Convert Link to make a permanent server link
+<br>
+<input type="text" id="textbox">
+<button onclick="getValue()">Convert Link</button>
 </body></html>
