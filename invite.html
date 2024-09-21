@@ -8,7 +8,7 @@ function LoadInvite() {
     let str = window.location.href;
     let result = str.slice(39);
     
-    window.location.replace('roblox://navigation/share_links?code='+result+'&type=ExperienceInvite');
+    window.location.replace('roblox://navigation/share_links?code='+result);
     sleep(10000).then(() => { window.location.replace('https://www.roblox.com/home'); });
     
 }
