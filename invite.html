@@ -1,0 +1,24 @@
+<html>
+<head>
+<script>
+function sleep(ms) {
+  return new Promise(resolve => setTimeout(resolve, ms));
+}
+function LoadInvite() {
+    let str = window.location.href;
+    let result = str.slice(39);
+    
+    window.location.replace('roblox://navigation/share_links?code='+result+'&type=ExperienceInvite');
+    sleep(10000).then(() => { window.location.replace('https://www.roblox.com/home'); });
+    
+}
+// window.location.href.slice(29).split('/')[0] gives roblox game id for adding a future action button
+// window.location.replace('roblox://experiences/start?'+'PlaceID='+window.location.href.slice(29).split('/')[0])
+  // makes you join current experience on page
+LoadInvite();
+</script>
+</head>
+<body>
+"joining game failed dude to your brouwser not supporting javascript"
+</body>
+  </html>
