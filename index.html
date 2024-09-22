@@ -27,6 +27,25 @@
   let sharelink = 'https://bj0rntje.github.io/invite.html?' + FixedStringValues;
   OutputBox.value = sharelink;
 }
+    function getValueGame() {
+  var textbox = document.getElementById("textboxGame");
+  let FixedStringValues = textbox.value.slice(29).split('/')[0];
+  let sharelink = 'https://bj0rntje.github.io/game.html?' + FixedStringValues
+  navigator.clipboard.writeText(sharelink);
+  alert('Coppied '+sharelink+' to clipboard');
+}
+      function InstantJoinGame() {
+  var textbox = document.getElementById("textboxGame");
+  let FixedStringValues = textbox.value.slice(29).split('/')[0];
+  window.location.replace('roblox://experiences/start?PlaceID='+FixedStringValues)
+}
+      function OutputLinkGame() {
+  var textbox = document.getElementById("textboxGame");
+    var OutputBox = document.getElementById("OutputBoxGame");
+  let FixedStringValues = textbox.value.slice(29).split('/')[0];
+  let sharelink = 'https://bj0rntje.github.io/game.html?' + FixedStringValues;
+  OutputBoxGame.value = sharelink;
+}
 </script>
 </head><body>
 <h2>Automatic Joiners</h2>
@@ -35,6 +54,16 @@
 https://bj0rntje.github.io/join.html?640031638
 <br>
 change the number alfter the ? to the player id you want to automaticly join
+<br>
+<input type="text" id="textboxGame">
+<button onclick="getValueGame()">Convert Game Link And Copy</button>
+<button onclick="InstantJoinGame()">Convert Game Link And Join</button>
+<button onclick="OutputLinkGame()">Convert Game Link To Output</button>
+<br>
+output:
+<br>
+<input type="text" id="OutputBoxGame">
+<br>
 <br><br><br>
 
 <a href="https://bj0rntje.github.io/game.html?6516141723" target="_blank">Join Game</a> 
