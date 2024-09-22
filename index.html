@@ -35,15 +35,41 @@
 }
       function OutputLinkGame() {
   var textbox = document.getElementById("textboxGame");
-    var OutputBox = document.getElementById("OutputBoxGame");
+    var OutputBoxGame = document.getElementById("OutputBoxGame");
   let FixedStringValues = textbox.value.slice(29).split('/')[0];
   let sharelink = 'https://bj0rntje.github.io/game.html?' + FixedStringValues;
   OutputBoxGame.value = sharelink;
+}
+    function getValueUser() {
+  var textbox = document.getElementById("textboxUser");
+  let FixedStringValues = textbox.value.slice(29).split('/')[0];
+  let sharelink = 'https://bj0rntje.github.io/join.html?' + FixedStringValues
+  navigator.clipboard.writeText(sharelink);
+  alert('Coppied '+sharelink+' to clipboard');
+}
+      function InstantJoinUser() {
+  var textbox = document.getElementById("textboxUser");
+  let FixedStringValues = textbox.value.slice(29).split('/')[0]
+  window.location.replace('roblox://experiences/start?PlaceID='+FixedStringValues)
+}
+      function OutputLinkUser() {
+  var textbox = document.getElementById("textboxUser");
+    var OutputBoxUser = document.getElementById("OutputBoxUser");
+  let FixedStringValues = textbox.value.slice(29).split('/')[0]
+  let sharelink = 'https://bj0rntje.github.io/join.html?' + FixedStringValues;
+  OutputBoxUser.value = sharelink;
 }
 </script>
 </head><body>
 <h2>Automatic Joiners</h2>
 <a href="https://bj0rntje.github.io/join.html?640031638" target="_blank">Join User</a> 
+<br>
+Put the user link intro the input box below to convert it to a working join link
+<br>
+<input type="text" id="textboxUser">
+<button onclick="getValueUser()">Convert Game User And Copy</button>
+<button onclick="InstantJoinUser()">Convert User Link And Join</button>
+<button onclick="OutputLinkUser()">Convert User Link To Output</button>
 <br>
 https://bj0rntje.github.io/join.html?640031638
 <br>
@@ -64,12 +90,15 @@ output:
 <input type="text" id="OutputBoxGame">
 <br>
 https://bj0rntje.github.io/game.html?6516141723
+<br>
+change the number alfter the ? to the player id you want to automaticly join
 <br><br><br>
+
 <a href="https://github.com/bj0rntje/bj0rntje.github.io/" target="_blank">View site via github</a> 
 <br>
 used to view source code of site.
-
 <br><br><br>
+
 <a href="https://greasyfork.org/nl/scripts/509220-roblox-quick-join-button" target="_blank">Install roblox quick join button via tampermonkey</a> 
 <br>
 tampermonkey is a site to publish scripts. this will require the tampermonkey extention to be installed
@@ -78,6 +107,7 @@ This adds a button next to the play button to instantly join the game
 <br>
 https://greasyfork.org/nl/scripts/509220-roblox-quick-join-button
 <br><br><br>
+
 <a href="https://greasyfork.org/nl/scripts/509224-roblox-quick-join-button-profile" target="_blank">Install roblox quick join button on profile via tampermonkey</a> 
 <br>
 tampermonkey is a site to publish scripts. this will require the tampermonkey extention to be installed
@@ -97,9 +127,9 @@ private server links also work as long as it starts with https://www.roblox.com/
 by creating a invite link usualy u cannot join it urself but if u convert the link you can join / invite urself allowing you to rejoin the game
 <br>
 <input type="text" id="textbox">
-<button onclick="getValue()">Convert Link And Copy</button>
-<button onclick="InstantJoin()">Convert Link And Join</button>
-<button onclick="OutputLink()">Convert Link To Output</button>
+<button onclick="getValue()">Convert Invite Link And Copy</button>
+<button onclick="InstantJoin()">Convert Invite Link And Join</button>
+<button onclick="OutputLink()">Convert Invite Link To Output</button>
 <br>
 output:
 <br>
